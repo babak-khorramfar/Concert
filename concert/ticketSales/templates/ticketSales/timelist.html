@@ -1,0 +1,55 @@
+{% extends "ticketSales/base.html" %}
+{% block title %}
+{{ concertdetails.Name }} List of concert sessions
+{% endblock %}
+{% block content %}
+
+<div class="row row-cols-1 row-cols-md-4 mb-4 text-center">
+    {% if timelist %}
+        {% for time in timelist %}
+        
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h4>{{ time.concertModel.Name }}</h4>
+                    </div>
+                    <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4">
+            
+            
+            {% comment %} <div class="col-md-3">
+                <a>
+                    <div class="timBox"> {% endcomment %}
+                        
+                        <p>{{ time.concertModel.SingerName }}</p>
+                        <p>{{ time.locationModel.Name }}</p>
+                        <p>{{ time.StartDateTime }}</p>
+                        <div class="
+                        {% if time.Status == time.Start %}
+                            btn btn-success
+                        {% elif time.Status == time.End %}
+                            btn btn-danger
+                        {% elif time.Status == time.Cancel %}
+                            btn btn-primary
+                        {% elif time.Status == time.Saling %}
+                            btn btn-warning
+                        {% else %}
+
+                        {% endif %}
+                        ">
+                            {{ time.get_Status_display}}
+                        </div>
+                    {% comment %} </div>
+                    
+                </a> {% endcomment %}
+                    </ul>
+                    </div>
+                </div>
+    </div>
+
+        
+
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}

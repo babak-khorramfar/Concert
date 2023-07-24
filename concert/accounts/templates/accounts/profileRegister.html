@@ -1,0 +1,47 @@
+{% extends "ticketSales/base.html" %}
+ {% block title %}
+Login and Registration
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <img class="mb-3 login-logo" src="/static/logo.svg" alt="" width="80" height="80">
+        <h1 class="h3 mb-3 fw-normal">Register Now</h1>
+        <p style="color: red;">{{ error }}</p>
+{% comment %} LOGIN FORM {% endcomment %}
+    <div class="col-md-6">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+    
+            <label for="id_first_name">First Name</label>
+            <p>{{ formData.first_name }}</p>
+
+            <label for="id_last_name">Last Name</label>
+            <p>{{ formData.last_name }}</p>
+
+            <label for="id_Gender">Gender</label>
+            <p>{{ formData.Gender }}</p>
+
+            <label for="id_Credit">Credit</label>
+            <p>{{ formData.Credit }}</p>
+        
+    </div>
+    <div class="col-md-6">  
+        
+            <label for="id_email">Email</label>
+            <p>{{ formData.email }}</p>
+
+            <label for="id_username">Username</label>
+            <p>{{ formData.username }}</p>
+            
+            <label for="id_password">Password</label>
+            <p>{{ formData.password }}</p>
+            
+            {{ formData.ProfileImage }}
+
+            <button class="btn btn-primary w-100 py-2" type="submit">Register</button>
+    </div>
+</div>  
+    </form>
+
+{% endblock %}

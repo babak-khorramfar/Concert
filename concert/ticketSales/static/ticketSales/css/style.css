@@ -1,0 +1,149 @@
+
+.rowbox h1 {
+    margin-bottom: 20px;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.rowbox {
+    
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: rgba(33, 37, 41, var(--bs-bg-opacity, 1)) !important;
+}
+
+.container-fluid {
+    --bs-bg-opacity: 1;
+    background-color: rgba(33, 37, 41, var(--bs-bg-opacity, 1)) !important;
+    color: #fff;
+    font-size: 32px;
+    text-align: center;
+    padding: 20px;
+}
+
+.imageBox {
+    margin: 10px;
+    background-color:whitesmoke;
+    text-align: center;
+    font-size: 18px;
+    border: 1px dashed rgb(0, 165, 121);
+    padding: 10px;
+}
+
+.imageBox-R img {
+    width: 100%;
+    height: auto;
+}
+
+.locBox {
+    margin: 10px;
+    background-color:whitesmoke;
+    text-align: center;
+    font-size: 18px;
+    border: 1px dashed rgb(0, 165, 121);
+    padding: 10px;
+}
+
+.imageBox.profile img {
+    width: 100%;
+    height: auto;
+}
+
+.imageBox img {
+    width: 154px;
+    height: 226px;
+}
+
+.btnul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.btnul li {
+    float: left;
+    margin-left: 10px;
+}
+
+.row.locationloader {
+    background-color: whitesmoke;
+    padding: 5px;
+}
+
+.row.location {
+    background-color: thistle;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px dashed rgb(69, 69, 69);
+    margin: 5px 0;
+}
+
+.timBox {
+    margin: 5px;
+    background-color: whitesmoke;
+    font-size: 16px;
+    border: 1px dashed rgb(0, 165, 121);
+    padding: 10px;
+    text-align: center;
+}
+
+.btn.btn-warning{
+    font-size: 12px;
+}
+  
+.form-container {
+    width: 50%;
+    margin: 20px 25%;
+    padding: 20px;
+    background: whitesmoke;
+    border-radius: 5px;
+    text-align: center;
+}
+  
+form {
+    display: flex;
+    flex-direction: column;
+}
+  
+input {
+    margin: 5px 0 !important;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+button {
+    margin: 5px 0 !important;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.text-bg-dark {
+    color: rgba(255, 255, 255, .25) !important;
+}
+
+.btn-warning {
+    font-size: 16px !important;
+}
+
+.info-row {
+    background-color:whitesmoke;
+    padding: 5px 15px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.btn-pe {
+    float: right;
+}

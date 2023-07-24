@@ -1,0 +1,28 @@
+{% extends "ticketSales/base.html" %}
+{% block title %}
+{{ concertdetails.Name }} Concert Details
+{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-md-9">
+        <div class="info-row">
+            <h5>Concert Name : {{concertdetails.Name }}</h5>
+        </div>
+        <div class="info-row">
+        <h5>Singer : {{concertdetails.SingerName }}</h5>
+        </div>       
+        <div class="info-row">
+        <h5>Length : {{concertdetails.length }}</h5>
+        </div>
+        {% if user.is_authenticated and user.is_superuser %}
+            <button type="button" onclick="window.location.href='/concertEdit/{{ concertdetails.id }}'" class="btn btn-primary">Edit Concert</button>
+        {% endif %}
+    </div>
+
+    <div class="col-md-3">
+        <div class="imageBox-R">
+            <img src="{{ concertdetails.Poster.url }}" class="img-responsive">
+        </div>
+    </div>
+</div>
+{% endblock %}

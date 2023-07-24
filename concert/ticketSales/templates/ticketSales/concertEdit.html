@@ -1,0 +1,28 @@
+{% extends "ticketSales/base.html" %}
+{% block title %}
+Concert Edit
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 info-row">
+    
+            <h4> Edit Concert</h4>
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ concertForm.Name }}
+                {{ concertForm.SingerName }}
+                {{ concertForm.length }}
+            
+        </div>
+
+        <div class="col-md-4 info-row">
+            <img src="{{ PosterImage.url }}" class="img-responsive" alt="PosterImage">
+                <br>{{ concertForm.Poster }}
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+    
+{% endblock %}

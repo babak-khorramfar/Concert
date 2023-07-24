@@ -1,0 +1,38 @@
+{% extends "ticketSales/base.html" %}
+{% block title %}
+Profile Edit
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="imageBox profile">
+                    <img src="{{ ProfileImage.url }}" class="img-responsive" alt="ProfileImage">
+                </div>
+                    {{ profileEditForm.ProfileImage }}
+        </div>
+        <div class="col-md-9">
+            <div class="col-md-12 info-row">
+                <p>Name: {{ userEditForm.first_name }}</p>
+            </div>
+            <div class="col-md-12 info-row">
+                <p>Last Name: {{ userEditForm.last_name }}</p>
+            </div>        
+            <div class="col-md-12 info-row">
+                <p>Email: {{ userEditForm.email }}</p>
+            </div>
+            <div class="col-md-12 info-row">
+                <p>Gender: {{ profileEditForm.Gender }}</p>
+            </div>
+            <div class="col-md-12 info-row">
+                <p>Credit: {{ profileEditForm.Credit }}</p>
+            </div>
+                <button type="submit" class="btn btn-primary btn-pe">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+    
+{% endblock %}

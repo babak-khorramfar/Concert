@@ -1,0 +1,29 @@
+{% extends "ticketSales/base.html" %}
+{% block title %}
+Location List
+{% endblock %}
+{% block content %}
+    <div class="row locationloader">
+        <div class="col-md-3">
+            <h4>Salon Names</h4>
+        </div>
+        <div class="col-md-9">
+            <h4>Address</h4>
+        </div>
+    </div>
+
+    {% if locationlist %}
+        {% for location in locationlist %}
+
+            <div class="row location">
+                <div class="col-md-3">
+                    {{ location }}
+                </div>
+                <div class="col-md-9">
+                    {{ location.Address }}
+                </div>
+            </div>
+
+        {% endfor %}
+    {% endif %}
+{% endblock %}
